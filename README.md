@@ -1,7 +1,7 @@
 Hugo
 ====
 
-This is a fork for [JakeWharton/hugo](https://github.com/JakeWharton/hugo).
+This is a fork of the [JakeWharton/hugo](https://github.com/JakeWharton/hugo) project.
 
 ```groovy
 buildscript {
