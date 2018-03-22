@@ -19,6 +19,7 @@ ext {
     publishedGroupId = GROUP
     libraryName = 'Hugo Plugin'
     artifact = 'hugo-plugin'
+    packaging = 'jar'
 
     libraryDescription = POM_DESCRIPTION
 

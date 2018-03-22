@@ -12,6 +12,7 @@ ext {
     publishedGroupId = GROUP
     libraryName = 'Hugo Annotations'
     artifact = 'hugo-annotations'
+    packaging = 'jar'
 
     libraryDescription = POM_DESCRIPTION
 
@@ -30,4 +31,5 @@ ext {
     allLicenses = ["Apache-2.0"]
 }
 
+apply from: '../installv1.gradle'
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

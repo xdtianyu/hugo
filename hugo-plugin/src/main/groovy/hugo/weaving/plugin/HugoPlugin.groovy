@@ -26,10 +26,10 @@ class HugoPlugin implements Plugin<Project> {
     }
 
     project.dependencies {
-      debugCompile 'org.xdty.hugo:hugo-runtime:1.2.4'
+      debugCompile 'org.xdty.hugo:hugo-runtime:1.2.5'
       // TODO this should come transitively
       debugCompile 'org.aspectj:aspectjrt:1.8.8'
-      compile 'org.xdty.hugo:hugo-annotations:1.2.4'
+      compile 'org.xdty.hugo:hugo-annotations:1.2.5'
     }
 
     project.extensions.create('hugo', HugoExtension)
