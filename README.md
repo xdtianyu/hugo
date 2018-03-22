@@ -1,7 +1,7 @@
 Hugo
 ====
 
-This is a fork of [JakeWharton/hugo](https://github.com/JakeWharton/hugo).
+This is a fork for [JakeWharton/hugo](https://github.com/JakeWharton/hugo).
 
 ```groovy
 buildscript {
@@ -10,7 +10,7 @@ buildscript {
   }
 
   dependencies {
-    classpath 'org.xdty.hugo:hugo-plugin:1.2.1'
+    classpath 'org.xdty.hugo:hugo-plugin:1.2.3'
   }
 }
 
@@ -18,6 +18,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'hugo'
 ```
 
+Hugo
 ====
 
 Annotation-triggered method call logging for your debug builds.
