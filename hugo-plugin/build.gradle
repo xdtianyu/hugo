@@ -13,8 +13,8 @@ dependencies {
 }
 
 ext {
-    bintrayRepo = 'maven'
-    bintrayName = 'hugo'
+    bintrayRepo = REPO_NAME
+    bintrayName = REPO_PACKAGE
 
     publishedGroupId = GROUP
     libraryName = 'Hugo Plugin'

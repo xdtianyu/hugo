@@ -6,8 +6,8 @@ sourceCompatibility = JavaVersion.VERSION_1_6
 
 
 ext {
-    bintrayRepo = 'maven'
-    bintrayName = 'hugo'
+    bintrayRepo = REPO_NAME
+    bintrayName = REPO_PACKAGE
 
     publishedGroupId = GROUP
     libraryName = 'Hugo Annotations'
