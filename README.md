@@ -1,6 +1,25 @@
 Hugo
 ====
 
+This is a fork of [JakeWharton/hugo](https://github.com/JakeWharton/hugo).
+
+```groovy
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+
+  dependencies {
+    classpath 'org.xdty.hugo:hugo-plugin:1.2.1'
+  }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'hugo'
+```
+
+====
+
 Annotation-triggered method call logging for your debug builds.
 
 As a programmer, you often add log statements to print method calls, their arguments, their return
