@@ -59,7 +59,7 @@ android.libraryVariants.all { variant ->
 
 ext {
     bintrayRepo = REPO_NAME
-    bintrayName = REPO_PACKAGE
+    bintrayName = 'hugo-runtime'
 
     publishedGroupId = GROUP
     libraryName = 'Hugo runtime'

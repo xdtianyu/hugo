@@ -14,7 +14,7 @@ dependencies {
 
 ext {
     bintrayRepo = REPO_NAME
-    bintrayName = REPO_PACKAGE
+    bintrayName = 'hugo-plugin'
 
     publishedGroupId = GROUP
     libraryName = 'Hugo Plugin'
