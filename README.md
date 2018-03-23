@@ -18,6 +18,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'hugo'
 ```
 
+![hugo](https://raw.githubusercontent.com/xdtianyu/hugo/master/art/hugo.png)
+
 Hugo
 ====
 
