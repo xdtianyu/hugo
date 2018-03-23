@@ -13,6 +13,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.CodeSignature;
 import org.aspectj.lang.reflect.MethodSignature;
+import org.aspectj.lang.reflect.SourceLocation;
 
 import java.util.concurrent.TimeUnit;
 
@@ -20,6 +21,7 @@ import java.util.concurrent.TimeUnit;
 public class Hugo {
     private static volatile boolean enabled = true;
     private static volatile String tag = "";
+    private static volatile int threshold = 16;
 
     @Pointcut("within(@hugo.weaving.DebugLog *)")
     public void withinAnnotatedClass() {}
@@ -39,8 +41,13 @@ public class Hugo {
     public static void setEnabled(boolean enabled) {
         Hugo.enabled = enabled;
     }
+
     public static void setTag(String tag) {
-        Hugo.tag = tag;
+        Hugo.tag = tag + " - ";
+    }
+
+    public static void setThreshold(int threshold) {
+        Hugo.threshold = threshold;
     }
 
     @Around("method() || constructor()")
@@ -102,6 +109,7 @@ public class Hugo {
         }
 
         Signature signature = joinPoint.getSignature();
+        SourceLocation sourceLocation = joinPoint.getSourceLocation();
 
         Class<?> cls = signature.getDeclaringType();
         String methodName = signature.getName();
@@ -119,7 +127,15 @@ public class Hugo {
             builder.append(Strings.toString(result));
         }
 
-        if (lengthMillis >= 16) {
+        if (sourceLocation != null) {
+            builder.append(" - (");
+            builder.append(sourceLocation.getFileName());
+            builder.append(":");
+            builder.append(sourceLocation.getLine());
+            builder.append(")");
+        }
+
+        if (lengthMillis >= threshold && Looper.myLooper() == Looper.getMainLooper()) {
             Log.e(tag + asTag(cls), builder.toString());
         } else {
             Log.v(tag + asTag(cls), builder.toString());
