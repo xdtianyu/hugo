@@ -10,7 +10,7 @@ buildscript {
   }
 
   dependencies {
-    classpath 'org.xdty.hugo:hugo-plugin:1.2.5'
+    classpath 'org.xdty.hugo:hugo-plugin:1.2.8'
   }
 }
 
